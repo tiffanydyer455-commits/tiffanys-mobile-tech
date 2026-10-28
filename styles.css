@@ -110,7 +110,11 @@ p { margin-top: 0; margin-bottom: var(--space-16); color: var(--muted); }
 .page-hero { padding: var(--space-48) 0; }
 .small-hero h1 { color: var(--white); }
 
-.hero-grid, .process-grid, .contact-layout, .split-layout { display: grid; gap: var(--space-32); }
+.hero-grid, .process-grid, .contact-layout, .split-layout {
+  display: grid;
+  gap: var(--space-32);
+  min-width: 0;
+}
 .hero-grid { grid-template-columns: 1.2fr 0.8fr; align-items: center; }
 .eyebrow {
   display: inline-block;
@@ -308,6 +312,7 @@ p { margin-top: 0; margin-bottom: var(--space-16); color: var(--muted); }
   gap: var(--space-16);
   color: var(--muted);
 }
+.contact-list li { overflow-wrap: anywhere; }
 
 .site-footer {
   background: var(--midnight);
