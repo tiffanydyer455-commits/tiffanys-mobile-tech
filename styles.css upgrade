@@ -1,0 +1,117 @@
+  background: var(--mint);
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.services-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-24); }
+.pricing-wrap { display: grid; gap: var(--space-24); }
+.pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pricing-card .price {
+  font-size: 2.2rem;
+  color: var(--navy);
+  font-weight: 700;
+  margin: 0 0 var(--space-16);
+}
+.pricing-card ul { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.featured {
+  border: 2px solid var(--blue);
+  background: linear-gradient(180deg, rgba(47, 111, 237, 0.06), rgba(94, 201, 195, 0.08));
+}
+
+.split-layout { grid-template-columns: 1.3fr 0.7fr; align-items: center; }
+.callout-box {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: var(--space-32);
+  box-shadow: var(--shadow);
+}
+.callout-box h2, .callout-box li { color: var(--white); }
+.callout-box ul { padding-left: 1.1rem; margin: 0; }
+
+.contact-layout { grid-template-columns: 1.2fr 0.8fr; }
+.contact-form { display: grid; gap: var(--space-16); }
+#contact-form { min-width: 0; }
+.contact-form label {
+  display: grid;
+  gap: var(--space-8);
+  font-weight: 600;
+  color: var(--text);
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+  width: 100%;
+  border: 1px solid #c7d2df;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: #f9fafb;
+  color: var(--text);
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+  outline: 2px solid rgba(47, 111, 237, 0.3);
+  border-color: var(--blue);
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-16);
+  color: var(--muted);
+}
+.contact-list li { overflow-wrap: anywhere; }
+
+.site-footer {
+  background: var(--midnight);
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-24) 0;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+.footer-links { display: flex; align-items: center; gap: var(--space-16); }
+
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-16) 0;
+  }
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-8) var(--space-16);
+  }
+  .hero-grid, .process-grid, .contact-layout, .split-layout, .services-detail-grid, .pricing-grid, .services-grid, .values-grid, .stats-grid { grid-template-columns: 1fr; }
+  .section { padding: var(--space-48) 0; }
+  .button-row { flex-direction: column; }
+  .button { width: 100%; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .services-grid, .values-grid, .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-grid, .process-grid, .contact-layout, .split-layout { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 1200px) {
+  .hero { padding-top: var(--space-64); padding-bottom: var(--space-64); }
+}
+
+/* Keep footer copy readable: the global paragraph rule sets its own color. */
+.site-footer p { color: #ffffff; }
+
+/* Visible keyboard focus on light and dark surfaces. */
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #0d1b2a;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
