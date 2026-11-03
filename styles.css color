@@ -12,7 +12,7 @@
   --cream: #f8f6f1;
   --text: #1d2a39;
   --muted: #536271;
-  --white: #ffffff;
+  --white: #fffff;
   --shadow: 0 16px 32px rgba(28, 47, 72, 0.12);
   --radius: 18px;
   --space-8: 8px;
@@ -29,7 +29,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: var(--cream);
+  background: var ( #005f73;
   color: var(--text);
   line-height: 1.6;
 }
