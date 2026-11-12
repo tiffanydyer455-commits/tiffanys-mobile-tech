@@ -30,10 +30,10 @@
             <div class="field"><label for="email">Email <span>(required)</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" /><span class="field-error" id="email-error" hidden></span></div>
             <fieldset class="choice-group" id="service-group" aria-describedby="service-error">
               <legend>What do you need help with? <span>(required)</span></legend>
-              <label class="choice"><input type="radio" name="service" value="Mobile setup" required /> Mobile setup</label>
-              <label class="choice"><input type="radio" name="service" value="Wi-Fi troubleshooting" /> Wi-Fi troubleshooting</label>
-              <label class="choice"><input type="radio" name="service" value="Repair support" /> Repair support</label>
-              <label class="choice"><input type="radio" name="service" value="General consultation" /> General consultation</label>
+              <div class="choice"><input id="service-mobile" type="radio" name="service" value="Mobile setup" required /><label for="service-mobile">Mobile setup</label></div>
+              <div class="choice"><input id="service-wifi" type="radio" name="service" value="Wi-Fi troubleshooting" /><label for="service-wifi">Wi-Fi troubleshooting</label></div>
+              <div class="choice"><input id="service-repair" type="radio" name="service" value="Repair support" /><label for="service-repair">Repair support</label></div>
+              <div class="choice"><input id="service-consult" type="radio" name="service" value="General consultation" /><label for="service-consult">General consultation</label></div>
               <span class="field-error" id="service-error" hidden></span>
             </fieldset>
             <div class="field"><label for="message">Message <span>(required)</span></label><textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea><span class="field-error" id="message-error" hidden></span></div>
@@ -63,9 +63,7 @@
         status.textContent = '';
         let firstInvalid = null;
         fields.forEach(({ control, error, label, radio }) => {
-          const valid = radio
-            ? Boolean(form.querySelector('input[name="service"]:checked'))
-            : control.checkValidity();
+          const valid = radio ? Boolean(form.querySelector('input[name="service"]:checked')) : control.checkValidity();
           control.setAttribute('aria-invalid', String(!valid));
           error.hidden = valid;
           error.textContent = valid ? '' : (control.validity?.typeMismatch ? `Enter a valid ${label.toLowerCase()} address.` : `${label} is required.`);
