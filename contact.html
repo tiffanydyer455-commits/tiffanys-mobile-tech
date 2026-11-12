@@ -11,83 +11,82 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="Tiffany's Mobile Tech home">
-          <span class="brand-mark">T</span>
-          <span>Tiffany's Mobile Tech</span>
-        </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="page-hero small-hero">
-        <div class="container">
-          <p class="eyebrow">Get in touch</p>
-          <h1>Let’s make your tech setup easier.</h1>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container contact-layout">
-          <div class="contact-card">
-            <h2>Send a message</h2>
-            <form id="contact-form" class="contact-form">
-              <label>
-                Name
-                <input type="text" name="name" placeholder="Your name" />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" placeholder="you@example.com" />
-              </label>
-              <label>
-                Service needed
-                <select name="service">
-                  <option>Mobile setup</option>
-                  <option>Wi‑Fi troubleshooting</option>
-                  <option>Repair support</option>
-                  <option>General consultation</option>
-                </select>
-              </label>
-              <label>
-                Message
-                <textarea name="message" rows="5" placeholder="Tell us what you need help with."></textarea>
-              </label>
-              <button type="submit" class="button primary">Send Request</button>
-            </form>
-          </div>
-
-          <aside class="contact-card">
-            <h2>Contact details</h2>
-            <ul class="contact-list">
-              <li><strong>Email:</strong> hello@tiffanysmobiletech.com</li>
-              <li><strong>Phone:</strong> (555) 123-4567</li>
-              <li><strong>Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM</li>
-              <li><strong>Location:</strong> Serving local homes and businesses</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header"><div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">T</span><span>Tiffany's Mobile Tech</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><ul class="nav-list">
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+      </ul></nav>
+    </div></header>
+    <main id="main-content">
+      <section class="page-hero small-hero"><div class="container"><p class="eyebrow">Get in touch</p><h1>Let's make your tech setup easier.</h1></div></section>
+      <section class="section"><div class="container contact-layout">
+        <section class="contact-card" aria-labelledby="form-heading">
+          <h2 id="form-heading">Send a message</h2>
+          <p id="form-note">All fields are required; this classroom demo validates your message locally but does not send or store it.</p>
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="field"><label for="name">Name <span>(required)</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" /><span class="field-error" id="name-error" hidden></span></div>
+            <div class="field"><label for="email">Email <span>(required)</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" /><span class="field-error" id="email-error" hidden></span></div>
+            <fieldset class="choice-group" id="service-group" aria-describedby="service-error">
+              <legend>What do you need help with? <span>(required)</span></legend>
+              <label class="choice"><input type="radio" name="service" value="Mobile setup" required /> Mobile setup</label>
+              <label class="choice"><input type="radio" name="service" value="Wi-Fi troubleshooting" /> Wi-Fi troubleshooting</label>
+              <label class="choice"><input type="radio" name="service" value="Repair support" /> Repair support</label>
+              <label class="choice"><input type="radio" name="service" value="General consultation" /> General consultation</label>
+              <span class="field-error" id="service-error" hidden></span>
+            </fieldset>
+            <div class="field"><label for="message">Message <span>(required)</span></label><textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea><span class="field-error" id="message-error" hidden></span></div>
+            <button type="submit" class="button primary">Check message</button>
+          </form>
+        </section>
+        <aside class="contact-card" aria-labelledby="details-heading"><h2 id="details-heading">Contact details</h2><ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:hello@tiffanysmobiletech.com">hello@tiffanysmobiletech.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><strong>Hours:</strong> Mon–Sat, 9:00 AM–6:00 PM</li>
+          <li><strong>Location:</strong> Serving local homes and businesses</li>
+        </ul></aside>
+      </div></section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Tiffany's Mobile Tech</p>
-        <div class="footer-links">
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Tiffany's Mobile Tech</p><nav aria-label="Footer navigation"><div class="footer-links"><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav></div></footer>
+    <script>
+      const form = document.querySelector('#contact-form');
+      const status = document.querySelector('#form-status');
+      const fields = [
+        { control: document.querySelector('#name'), error: document.querySelector('#name-error'), label: 'Name' },
+        { control: document.querySelector('#email'), error: document.querySelector('#email-error'), label: 'Email' },
+        { control: document.querySelector('#service-group'), error: document.querySelector('#service-error'), label: 'Service', radio: true },
+        { control: document.querySelector('#message'), error: document.querySelector('#message-error'), label: 'Message' }
+      ];
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        status.textContent = '';
+        let firstInvalid = null;
+        fields.forEach(({ control, error, label, radio }) => {
+          const valid = radio
+            ? Boolean(form.querySelector('input[name="service"]:checked'))
+            : control.checkValidity();
+          control.setAttribute('aria-invalid', String(!valid));
+          error.hidden = valid;
+          error.textContent = valid ? '' : (control.validity?.typeMismatch ? `Enter a valid ${label.toLowerCase()} address.` : `${label} is required.`);
+          if (!valid && !firstInvalid) firstInvalid = radio ? form.querySelector('input[name="service"]') : control;
+        });
+        if (firstInvalid) {
+          status.textContent = 'Please correct the highlighted fields.';
+          firstInvalid.focus();
+          return;
+        }
+        status.textContent = 'Your message is complete. This demo does not transmit form submissions; please use the email or phone details on this page to contact us.';
+      });
+      form.addEventListener('input', (event) => {
+        const field = fields.find(({ control }) => control.contains(event.target) || control === event.target);
+        if (field && field.control.getAttribute('aria-invalid') === 'true') {
+          const valid = field.radio ? Boolean(form.querySelector('input[name="service"]:checked')) : field.control.checkValidity();
+          field.control.setAttribute('aria-invalid', String(!valid));
+          field.error.hidden = valid;
+          field.error.textContent = valid ? '' : (field.control.validity?.typeMismatch ? 'Enter a valid email address.' : `${field.label} is required.`);
+        }
+      });
+    </script>
   </body>
 </html>
