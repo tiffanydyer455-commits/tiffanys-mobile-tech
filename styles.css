@@ -46,7 +46,7 @@ p { margin-top: 0; margin-bottom: var(--space-16); color: var(--muted); }
 .site-header { background: var(--midnight); color: var(--white); position: sticky; top: 0; z-index: 10; box-shadow: 0 8px 20px rgba(16, 42, 67, 0.16); }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: var(--space-24); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-8); color: var(--white); font-weight: 700; letter-spacing: 0.02em; text-decoration: none; }
-.brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: var(--white); font-family: "Merriweather", serif; }
+.brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: var(--white); font-family: "Merriweather", serif; font-size: 1rem; }
 .site-nav { display: flex; align-items: center; }
 .nav-list { list-style: none; display: flex; align-items: center; gap: var(--space-24); margin: 0; padding: 0; }
 .nav-list a { color: #e2e8f0; font-weight: 500; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.3em; }
@@ -62,7 +62,7 @@ p { margin-top: 0; margin-bottom: var(--space-16); color: var(--muted); }
 .lead, .lead-text { font-size: 1.08rem; color: #ffffff; }
 .hero-content > p:not(.eyebrow) { color: #ffffff; }
 .button-row { display: flex; flex-wrap: wrap; gap: var(--space-16); margin-top: var(--space-24); }
-.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-24); border-radius: 999px; border: 2px solid transparent; font-weight: 600; text-decoration: none; cursor: pointer; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-24); border-radius: 999px; border: 2px solid transparent; font-weight: 600; text-decoration: none; }
 .button:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .button.primary { background: var(--teal); color: var(--white); box-shadow: var(--shadow); }
 .button.secondary { background: transparent; border-color: #ffffff; color: var(--white); }
@@ -122,6 +122,7 @@ p { margin-top: 0; margin-bottom: var(--space-16); color: var(--muted); }
 .footer-links { display: flex; align-items: center; gap: var(--space-16); }
 .footer-links a { color: #e2e8f0; text-decoration: underline; text-underline-offset: 0.25em; }
 .footer-links a:hover { color: var(--white); }
+.footer-links span[aria-current="page"] { color: var(--white); font-weight: 700; text-decoration: none; cursor: default; }
 
 @media (max-width: 767px) {
   .nav { flex-direction: column; justify-content: center; padding: var(--space-16) 0; }
