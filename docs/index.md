@@ -2,6 +2,149 @@
 title: Tiffany's Mobile Tech
 ---
 
-# Tiffany's Mobile Tech
+<div class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">T</span>
+      <span>Tiffany's Mobile Tech</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="active" href="/" aria-current="page">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
-This site was added to satisfy the GitHub Pages build requirements.
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Smart solutions for everyday tech</p>
+        <h1>Helping your business stay connected and productive.</h1>
+        <p class="lead">
+          Tiffany's Mobile Tech delivers practical smartphone, Wi‑Fi, and device support for homes,
+          schools, and growing businesses that need dependable technology without the stress.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="#contact">Book a Consultation</a>
+          <a class="button secondary" href="#services">Explore Services</a>
+        </div>
+        <ul class="trust-list">
+          <li>Same-week support</li>
+          <li>Friendly local guidance</li>
+          <li>Clear upfront pricing</li>
+        </ul>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-card">
+          <p class="panel-label">Fast response</p>
+          <h2>Tech help that meets you where you are.</h2>
+          <div class="mini-stats">
+            <div>
+              <strong>1,200+</strong>
+              <span>devices supported</span>
+            </div>
+            <div>
+              <strong>98%</strong>
+              <span>customer satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">What we offer</p>
+        <h2>Reliable tech services tailored to your needs.</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">📱</div>
+          <h3>Mobile Setup</h3>
+          <p>Phone transfers, app setup, and device optimization for personal and professional use.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">📡</div>
+          <h3>Wi‑Fi &amp; Networks</h3>
+          <p>Improve coverage, troubleshoot connectivity issues, and keep your workspace running smoothly.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🛠️</div>
+          <h3>Repair &amp; Support</h3>
+          <p>On-site troubleshooting and practical fixes for everyday tech frustrations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg" id="about">
+    <div class="container stats-grid">
+      <div class="stat-box">
+        <strong>15+</strong>
+        <span>Years of combined experience</span>
+      </div>
+      <div class="stat-box">
+        <strong>24/7</strong>
+        <span>Remote support guidance</span>
+      </div>
+      <div class="stat-box">
+        <strong>Local</strong>
+        <span>Friendly one-on-one service</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container process-grid">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Simple, personal, and stress-free.</h2>
+      </div>
+      <ol class="process-list">
+        <li class="process-item">
+          <span aria-hidden="true">01</span>
+          <div>
+            <h3>Tell us what's happening</h3>
+            <p>Share the issue, device, or setup challenge you need help with.</p>
+          </div>
+        </li>
+        <li class="process-item">
+          <span aria-hidden="true">02</span>
+          <div>
+            <h3>We assess your needs</h3>
+            <p>We recommend the best fix based on your goals, budget, and timeline.</p>
+          </div>
+        </li>
+        <li class="process-item">
+          <span aria-hidden="true">03</span>
+          <div>
+            <h3>Enjoy a smoother experience</h3>
+            <p>Walk away with a faster, more reliable setup you can trust.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Tiffany's Mobile Tech</p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</footer>
